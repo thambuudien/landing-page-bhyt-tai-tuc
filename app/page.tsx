@@ -2,66 +2,41 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/config/site';
 
-// Import các thành phần giao diện
+// Import các thành phần giao diện động
 import Hero from '@/components/Hero';
 import Benefits from '@/components/Benefits';
 import RegistrationForm from '@/components/RegistrationForm';
 import Footer from '@/components/Footer';
 
-// 🚀 CẤU HÌNH METADATA TỐI ƯU SEO & OPEN GRAPH CHUẨN GOOGLE / FACEBOOK / ZALO
 export const metadata: Metadata = {
-  title: 'Nhắc Hạn BHYT Tự Động - Bảo Vệ Quyền Lợi 5 Năm Liên Tục',
-  description: 'Đăng ký nhận thông báo nhắc lịch gia hạn thẻ BHYT miễn phí trước 30 ngày qua Zalo/SMS. Đảm bảo quyền lợi khám chữa bệnh 100% liên tục, không lo bị ngắt quãng tích lũy 5 năm.',
+  title: 'Nhắc Hạn BHYT Thanh Trì - Nhân Viên Thu Nguyễn Thị Phương',
+  description: 'Hệ thống đăng ký nhắc lịch gia hạn thẻ BHYT tự động tại Thanh Trì, Hà Nội. Được quản lý bởi Nhân viên thu BHXH Nguyễn Thị Phương - Hỗ trợ bà con giữ vững quyền lợi 5 năm liên tục.',
   keywords: [
-    'nhắc hạn bhyt', 
-    'bảo hiểm y tế 5 năm liên tục', 
-    'gia hạn thẻ bhyt online', 
-    'tra cứu hạn thẻ bhyt', 
-    'nhân viên thu bhxh bhyt', 
-    'quyền lợi bhyt'
+    'nguyen thi phuong bao hiem', 
+    'nhắc hạn bhyt thanh trì', 
+    'bhyt 5 nam lien tuc nguyen thi phuong', 
+    'gia han bao hiem y te thanh tri', 
+    'diem thu bhxh thanh tri'
   ],
   metadataBase: new URL(siteConfig.url),
   alternates: {
     canonical: '/',
   },
-  
-  // Cấu hình hiển thị khi chia sẻ liên kết mạng xã hội (Facebook, Zalo)
   openGraph: {
-    title: 'Nhắc Hạn BHYT Tự Động - Bảo Vệ Quyền Lợi 5 Năm Liên Tục',
-    description: 'Hệ thống tự động quét và nhắn lịch nhắc hạn thẻ BHYT trước 30 ngày qua SMS/Zalo. Tránh gián đoạn, an tâm hưởng 100% chi phí khám chữa bệnh.',
+    title: 'Nhắc Hạn BHYT Tự Động - Nhân Viên Thu Nguyễn Thị Phương (Thanh Trì)',
+    description: 'Bà con Thanh Trì đăng ký nhận tin nhắn nhắc hạn BHYT miễn phí trước 30 ngày. Đảm bảo quỹ BHYT chi trả 100% viện phí, bảo vệ thẻ 5 năm liên tục.',
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: 'vi_VN',
     type: 'website',
     images: [
       {
-        url: '/images/og-banner.jpg', // Kích thước chuẩn khuyến nghị: 1200x630 pixel
+        url: '/images/og-banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'Hệ thống nhắc hạn thẻ Bảo hiểm Y tế tự động bảo vệ quyền lợi 5 năm liên tục',
+        alt: 'Hệ thống nhắc hạn BHYT Nguyễn Thị Phương Thanh Trì',
       },
     ],
-  },
-
-  // Cấu hình hiển thị trên Twitter / X
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nhắc Hạn BHYT Tự Động - Bảo Vệ Quyền Lợi 5 Năm Liên Tục',
-    description: 'Hệ thống tự động nhắn lịch nhắc hạn thẻ BHYT trước 30 ngày qua SMS/Zalo.',
-    images: ['/images/og-banner.jpg'],
-  },
-
-  // Cấu hình chặn lập chỉ mục các trang rác (Nếu có) nhưng cho phép index trang chủ
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 };
 
@@ -72,63 +47,75 @@ export default function Home() {
       {/* 1. MÀN HÌNH ĐẦU (HERO SECTION) */}
       <Hero />
 
-      {/* 2. KHỐI NỖI ĐAU & BẢNG SO SÁNH QUYỀN LỢI TỐI ƯU SEO COGNITIVE */}
-      <section className="py-16 px-4 max-w-5xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-800 tracking-tight leading-tight">
-            Tại sao việc giữ thẻ BHYT "5 năm liên tục" lại quan trọng đến thế?
+      {/* 2. ĐOẠN NỘI DUNG THUYẾT PHỤC CHẠM ĐẾN NỖI ĐAU KHÁCH HÀNG */}
+      <section className="py-16 px-4 max-w-4xl mx-auto border-b border-slate-100">
+        <div className="text-center mb-10">
+          <span className="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">
+            Cảnh báo từ nhân viên thu bảo hiểm
+          </span>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-800 tracking-tight mt-3 leading-tight">
+            Thẻ BHYT Mẫu Mới Không In Hạn Dùng:<br/>
+            <span className="text-red-600">80% Người Dân Đang Quên Ngày Gia Hạn!</span>
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
-            Theo quy định của Bảo hiểm Xã hội Việt Nam, nếu thời gian gián đoạn đóng quá 3 tháng, thời gian tích lũy cũ sẽ bị hủy bỏ hoàn toàn.
+        </div>
+
+        <div className="space-y-6 text-base text-slate-700 leading-relaxed text-justify">
+          <p>
+            Chào bà con, mình là <strong>Nguyễn Thị Phương</strong> - Nhân viên thu bảo hiểm trực thuộc cơ quan Bảo hiểm Xã hội tại khu vực <strong>Thanh Trì, Hà Nội</strong>. Trong quá trình hỗ trợ bà con làm thủ tục KCB, Phương đã chứng kiến rất nhiều trường hợp đau lòng: Nhiều gia đình có người thân đổ bệnh nặng, nằm viện điều trị tốn hàng trăm triệu đồng mới tá hỏa phát hiện ra thẻ BHYT đã hết hạn từ lúc nào không hay.
+          </p>
+          
+          <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl my-6">
+            <h4 className="font-bold text-amber-800 mb-2 text-md flex items-center gap-1.5">
+              ⚠️ Quyền lợi &ldquo;5 năm liên tục&rdquo; dễ dàng bị HỦY BỎ chỉ vì chậm đóng 1 ngày!
+            </h4>
+            <p className="text-sm text-amber-900">
+              Quy định của Luật Bảo hiểm nêu rõ: Nếu thời gian gián đoạn giữa 2 lần đóng BHYT <strong>quá 3 tháng (90 ngày)</strong>, toàn bộ thời gian tích lũy trước đó của bà con sẽ <strong>bị ngắt quãng và tính lại từ đầu</strong>. Bà con sẽ mất quyền được Quỹ BHYT chi trả 100% viện phí đúng tuyến, phải tự đồng chi trả những khoản tiền khổng lồ ngoài ý muốn.
+            </p>
+          </div>
+
+          <p>
+            Thấu hiểu việc thẻ giấy mẫu mới không còn ghi hạn sử dụng khiến bà con gặp khó khăn trong việc theo dõi, Phương đã xây dựng <strong>Hệ thống nhắc hạn BHYT tự động hoàn toàn MIỄN PHÍ</strong> này. Chỉ cần đăng ký thông tin một lần duy nhất, hệ thống cá nhân của Phương sẽ tự động gửi tin nhắn SMS hoặc thông báo qua Zalo trực tiếp đến số điện thoại của bà con trước <strong>30 ngày</strong> để kịp thời đóng tiếp, bảo vệ quyền lợi khám chữa bệnh liên tục cho cả gia đình.
           </p>
         </div>
-        
-        {/* Bảng dữ liệu chuẩn ngữ nghĩa (Semantic HTML Table) giúp Google hiểu cấu trúc nội dung */}
-        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-8">
-          <table className="w-full text-left border-collapse bg-white">
+
+        {/* BẢNG SO SÁNH QUYỀN LỢI TẬP TRUNG NGỮ NGHĨA */}
+        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-10">
+          <table className="w-full text-left border-collapse bg-white text-sm">
             <thead>
-              <tr className="bg-slate-100 text-slate-700 text-sm border-b border-slate-200">
-                <th className="p-4 font-bold">Quyền lợi Khám Chữa Bệnh (KCB)</th>
-                <th className="p-4 font-bold">Thẻ thông thường</th>
-                <th className="p-4 font-bold text-blue-700 bg-blue-50/50">Thẻ đạt 5 năm liên tục</th>
+              <tr className="bg-slate-50 text-slate-700 border-b border-slate-200 font-bold">
+                <th className="p-4">Quyền lợi khi đi khám bệnh</th>
+                <th className="p-4">Thẻ bị gián đoạn / Dưới 5 năm</th>
+                <th className="p-4 text-blue-700 bg-blue-50/50">Thẻ đạt mốc 5 năm liên tục</th>
               </tr>
             </thead>
-            <tbody className="text-sm divide-y divide-slate-100">
-              <tr className="hover:bg-slate-50/80 transition-colors">
-                <td className="p-4 font-medium text-slate-800">Mức hưởng bảo hiểm đúng tuyến</td>
-                <td className="p-4 text-gray-600">Từ 80% - 95% chi phí danh mục</td>
-                <td className="p-4 font-bold text-emerald-600 bg-blue-50/50">Quỹ BHYT chi trả tối đa 100% chi phí</td>
+            <tbody className="divide-y divide-slate-100 text-slate-600">
+              <tr>
+                <td className="p-4 font-medium text-slate-800">Mức chi trả viện phí đúng tuyến</td>
+                <td className="p-4">Chỉ hưởng từ 80% đến 95% chi phí</td>
+                <td className="p-4 font-bold text-emerald-600 bg-blue-50/50">Được quỹ BHYT chi trả 100%</td>
               </tr>
-              <tr className="hover:bg-slate-50/80 transition-colors">
-                <td className="p-4 font-medium text-slate-800">Giấy chứng nhận miễn cùng chi trả</td>
-                <td className="p-4 text-gray-600">Không được hỗ trợ cấp</td>
-                <td className="p-4 text-slate-700 bg-blue-50/50">
-                  Được cấp khi số tiền cùng chi trả trong năm lớn hơn 6 lần mức lương cơ sở
-                </td>
+              <tr>
+                <td className="p-4 font-medium text-slate-800">Cấp giấy miễn cùng chi trả</td>
+                <td className="p-4">Không được áp dụng</td>
+                <td className="p-4 bg-blue-50/50 text-slate-700">Được miễn hoàn toàn tiền đồng chi trả đến hết ngày 31/12 của năm đó</td>
               </tr>
-              <tr className="hover:bg-slate-50/80 transition-colors">
-                <td className="p-4 font-medium text-slate-800">Thời gian gián đoạn tối đa cho phép</td>
-                <td className="p-4 text-gray-600">Không giới hạn</td>
-                <td className="p-4 text-red-500 bg-blue-50/50 font-medium">
-                  Không quá 3 tháng (90 ngày), quá hạn phải tích lũy lại từ đầu
-                </td>
+              <tr>
+                <td className="p-4 font-medium text-slate-800">Hệ quả nếu quên đóng quá hạn</td>
+                <td className="p-4">Phải mua thẻ mới</td>
+                <td className="p-4 text-red-500 bg-blue-50/50 font-medium">Bị hủy mốc tích lũy, phải đóng lại từ năm đầu tiên</td>
               </tr>
             </tbody>
           </table>
         </div>
-        
-        <p className="text-sm text-center italic text-red-500 font-medium max-w-2xl mx-auto leading-relaxed">
-          ⚠️ Cảnh báo từ cơ sở: Thẻ BHYT mẫu mới hiện nay không in hạn dùng trực tiếp trên phôi giấy, khiến người dân rất dễ quên ngày đóng tiếp nếu không chủ động tra cứu thường xuyên!
-        </p>
       </section>
 
-      {/* 3. KHỐI QUY TRÌNH HỆ THỐNG (BENEFITS SECTION) */}
+      {/* 3. KHỐI QUY TRÌNH HỆ THỐNG ĐÃ SỬ DỤNG MOTION & LUCIDE */}
       <Benefits />
 
-      {/* 4. FORM ĐĂNG KÝ NHẬN THÔNG BÁO (CLIENT INTERACTION FORM) */}
+      {/* 4. FORM ĐĂNG KÝ AN TOÀN BẢO MẬT THÔNG TIN CỦA CHỊ PHƯƠNG */}
       <RegistrationForm />
 
-      {/* 5. TOÀN BỘ CHÂN TRANG & THÔNG TIN ĐIỂM THU PHỤ TRÁCH & CREDIT THƯƠNG HIỆU */}
+      {/* 5. CHÂN TRANG ĐẦY ĐỦ THÔNG TIN LIÊN HỆ & BẢN QUYỀN THIẾT KẾ LONG WEB STUDIO */}
       <Footer />
 
     </main>
