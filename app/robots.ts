@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
   // Thay đổi 'https://yourdomain.com' thành tên miền chính thức của bạn
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nguyenphuong.io.vn'
 
   return {
     rules: {

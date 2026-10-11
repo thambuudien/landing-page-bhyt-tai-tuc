@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // Lấy mã Tracking ID từ biến môi trường (.env)
-  const gaId = process.env.NEXT_PUBLIC_GA_ID || '';
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-XTQCN3EZHC';
 
   return (
     <html lang="vi" className="scroll-smooth">
