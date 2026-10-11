@@ -8,10 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        // Định nghĩa font sans-serif mặc định của trang là Be Vietnam Pro
+        sans: ["var(--font-be-vietnam)", "sans-serif"],
       },
     },
   },
